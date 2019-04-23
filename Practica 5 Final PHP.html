@@ -1,0 +1,230 @@
+//Diskney Cabrera Practica Final PHP
+
+//1. Hacer un Programa que imprima los números del 100 al 1.
+<?php
+for($i = 100; $i >= 1; $i--) {
+echo "$i<br>";
+}
+  
+?>
+//2. Hacer un Programa que imprima los números del 1 al 10 y al final el promedio de ellos. 
+<?php
+for($i = 1; $i <= 10; $i++) {
+	echo "$i<br>";
+  	$suma = $i + $suma;
+}
+  echo "---------<br>";
+  echo "La sumatoria de los numeros anteriores es: $suma<br>";
+  $promedio = $suma / 10;
+  echo "El promedio de todos es: $promedio<br>"; 
+?>
+//3. Hacer un Programa  que haga la sumatoria de los números que el usuario digite, la cantidad 
+    
+<html>
+	<head>
+	<title></title>
+	</head>
+	<body>
+		<script>    
+ 
+			var num_count = 0;
+
+			var num_quant = prompt("Introduzca cuantos numeros desea sumar: ")
+			for ( i = 1; i <= num_quant; i = i + 1 ){
+				var num = prompt("Introduzca numeros a sumar: ")
+
+				num_count = num_count + parseInt(num);
+			}
+
+			document.write("Total: " + num_count);
+		</script>
+	</body>
+</html>
+
+
+/*4. Hacer un Programa que haga el promedio de los números que el usuario digite, la cantidad
+de números a promediar la elige el usuario. */
+<html>
+	<head>
+	</head>
+	<body>
+ 		<script>
+		
+			var num_count = 0;
+
+			var num_quant = prompt("Introduzca cuantos numeros desea sumar: ")
+
+			for ( i = 1; i <= num_quant; i = i + 1 ){
+				var num = prompt("Introduzca numeros a sumar: ")
+
+				num_count = num_count + parseInt(num);
+			}
+			var media = num_count /  num_quant;
+
+			document.write("Total: " + media);
+		</script>
+	</body>
+</html>
+
+
+
+/*5. Hacer un Programa  que pida un valor por teclado; imprima los números 
+Pares del 2 al 20, si el usuario digita un numero positivo. El programa imprimirá los 
+Números impares del 1 al 19, si el usuario digita un numero negativo.  */
+
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+ 		<script>
+			var numero = prompt("Introduzca un valor: ")
+
+			if (numero >= 0 ){
+				for ( i = 2; i <= 20; i = i + 2 ){
+					document.write(i+"\n");
+				}    
+			}
+			else{
+				for ( i = 1; i <= 20; i = i + 2 ){
+					document.write(i+"\n");
+				}    
+
+			}
+		</script>
+	</body>
+</html>
+
+
+
+/*6. Hacer un Programa  que capture por teclado el promedio. Despliegue en Pantalla un mensaje. Si el promedio es: 
+90 - 100 “Excelente” 
+80 – 89 “Muy Bueno” 
+70 - 79 “Bueno” 
+0 - 69 “Reprobado” */  
+<html>
+	<head>
+	</head>
+	<body> 
+		<script>
+
+			var nota = prompt("Introduzca su calificacion total: ")
+
+			if (nota >= 90 && nota <= 100){
+				document.write("Excelente");
+			}
+			else if (nota >= 80 && nota <= 89){
+				document.write("Muy Bueno");
+			}
+			else if(nota >= 70 && nota <= 79){
+				document.write("Bueno");
+			}
+			else{
+				document.write("Reprobado")
+			}
+			
+		</script>
+	</body>
+</html>
+
+
+
+
+//7. Hacer un Programa que despliegue en papel los números del 20 al 1. 
+    
+<html>
+	<head>
+	</head>
+	<body>
+ 
+		<script>    
+
+			for ( i = 20; i >= 1; i = i - 1 ){
+			  document.write(i + '\n');
+			}
+    
+		</script>
+	</body>
+</html>
+
+
+
+
+
+//8. Hacer un Programa  que cargue un vector con los números impares. El Vector es de 10 elementos.
+
+<html>
+	<head>
+	</head>
+	<body>
+    	<script>
+
+			var num = new Array(10);
+
+			for (var i = 1; i <= 20; i = i + 2) {
+				num[i] = i;
+			}
+			document.write(num.join(" "));
+
+		</script>
+</body>
+</html>
+
+
+
+//9. Hacer un Programa que haga el conteo de la serie de Fibonacci. 
+
+<html>
+<head>
+</head>
+	<body>
+ 
+		<script>
+
+
+			var num = prompt("Indique donde debe de parar la serie fibonacci: ")
+
+			var primero = 0;
+			var segundo = 1;
+			var fibonacci;
+
+			document.write(primero + " ");
+			document.write(segundo + " ");
+
+			for(var i = 3; i <= numero; i++)
+			{
+				fibonacci = primero + segundo;
+				primero = segundo;
+				primero = fibonacci;
+				document.write(fibonacci + " ");
+			}
+    
+		</script>
+	</body>
+</html>
+
+
+
+
+//10. Hacer un Programa que almacene los nombres introducidos por teclado. 
+
+<html>
+<head>
+</head>
+	<body> 
+		<script>   
+
+			var num = prompt("Cuantos nombres desea guardar? ")
+
+			var names = new Array();
+
+			for (var i = 1; i <= num; i = i + 1) {
+
+				var name = prompt("Introduzca nombres: ")
+				var new_name = names.push(name);
+			}
+			document.write(names.join(" "));
+    
+		</script>
+	</body>
+</html>
